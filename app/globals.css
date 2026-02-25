@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== DESIGN SYSTEM SABOR REAL ===== */
+
+:root {
+
+  --primary: #EA1D2C;
+  --primary-hover: #D61B29;
+
+  --background: #F7F7F7;
+  --card: #FFFFFF;
+
+  --text-primary: #1F2937;
+  --text-secondary: #6B7280;
+
+}
+
+body {
+
+  background: var(--background);
+
+}
+
+/* Reusable utility classes */
+.card {
+  background: var(--card);
+  border-radius: theme('borderRadius.xl'); /* Using Tailwind's rounded-xl */
+  box-shadow: theme('boxShadow.sm'); /* Using Tailwind's shadow-sm */
+  padding: theme('spacing.4'); /* Using Tailwind's p-4 */
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: theme('spacing.3') theme('spacing.4'); /* py-3 px-4 */
+  border-radius: theme('borderRadius.xl'); /* rounded-xl */
+  font-weight: theme('fontWeight.semibold'); /* font-semibold */
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.input {
+  border: 1px solid theme('colors.gray.300');
+  border-radius: theme('borderRadius.lg'); /* rounded-lg */
+  padding: theme('spacing.3'); /* p-3 */
+  width: 100%;
+  color: var(--text-primary);
+  background: var(--card);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.2);
+}
